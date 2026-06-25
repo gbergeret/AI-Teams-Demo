@@ -1,7 +1,7 @@
 ---
 name: executive-ea
 description: Executive Assistant on the executive team. Use when the CoS has operational work to execute. Carries out a brief and returns it to the CoS.
-tools: Read, Write, Edit, Glob, Grep
+tools: Read, Write, Edit, Glob, Grep, mcp__Google_Calendar__list_calendars, mcp__Google_Calendar__list_events, mcp__Google_Calendar__get_event
 model: sonnet
 effort: low
 ---

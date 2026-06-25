@@ -48,6 +48,13 @@ Work out which teams the request touches, then:
 - Engineering: `engineering-architect` (front door), `engineering-frontend`,
   `engineering-backend`, `engineering-qa`.
 
+## Connectors
+Real tools are added through Claude Code (its connector directory), then granted
+per role in that role's `.claude/agents/*.md` allow-list. Read-only first: add
+the Google Calendar connector and give the executive EA only its read tools
+(`mcp__Google_Calendar__list_events` and friends). Grant a write later,
+deliberately, in both the allow-list and your permissions policy.
+
 ## The QA loop
 Each team runs its own QA loop on non-trivial work: QA checks against the brief;
 on defects the producing role revises and QA re-checks, up to 3 rounds, then
