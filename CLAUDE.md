@@ -6,16 +6,17 @@ team handles a request and how teams combine.
 
 ## Load on every session
 1. This router.
-2. `MEMORY.md` and `context/VOICE.md`: the shared, org-wide canon.
+2. `MEMORY.md`: the shared, org-wide memory.
+3. `context/INDEX.md`: the map of shared context. Load context files on demand
+   (e.g. `context/VOICE.md`, `context/PROFILE.md`), not everything every time.
 
 Then route, and load only the team(s) the request needs, including that team's
 `MEMORY.md` and the `MEMORY.md` of any role you act as.
 
 ## First run: the welcome wizard
-On the first session, if `playbooks/000-welcome-wizard.md` exists and the name
-under "About you" in `MEMORY.md` is still the placeholder, run that playbook
-before anything else. It onboards you, then deletes itself, so this happens only
-once.
+On the first session, if `playbooks/000-welcome-wizard.md` exists and the name in
+`context/PROFILE.md` is not set yet, run that playbook before anything else. It
+onboards you, then deletes itself, so this happens only once.
 
 ## Teams
 | Folder | Team | Front door | Use for |

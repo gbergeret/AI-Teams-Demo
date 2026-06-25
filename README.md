@@ -9,7 +9,10 @@ every rule and permission in git, the repo as the company.
 ## What is in here
 - `CLAUDE.md`: the master router. Decides which team handles a request and how
   teams combine.
-- `MEMORY.md` and `context/VOICE.md`: the shared, org-wide canon.
+- `MEMORY.md`: the shared, org-wide memory.
+- `context/`: shared canon loaded on demand via `context/INDEX.md`. `VOICE.md`
+  (how to write) and `PROFILE.md` (who you are: what you do, where you live),
+  filled in by the first-run setup.
 - `teams/<team>/MEMORY.md`: what each team has learned.
 - `teams/<team>/<role>/`: one folder per role, each with `ROLE.md` (what it does)
   and `MEMORY.md` (what it has learned). Executive: `cos` (front door), `ea`,
