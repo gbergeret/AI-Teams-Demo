@@ -29,6 +29,36 @@ every rule and permission in git, the repo as the company.
    specialists; more than one, it coordinates the front doors and fans out
    across teams.
 
+## Concepts in this repo
+- **Master router** (`CLAUDE.md`) — the entry point is a router, not a team; it
+  counts the teams a request touches and routes accordingly.
+- **Multiple teams** (`teams/`) — an executive team and an engineering team,
+  each with its own front door, roles, and memory.
+- **Team front doors** — the Chief of Staff fronts the executive team; the
+  Architect fronts engineering. Each breaks work down for its specialists.
+- **Cross-team handoff** — for work spanning teams, the router calls the front
+  doors **plan-only** (they return briefs, do not spawn), picks a lead team and a
+  handoff contract, then fans out and synthesises.
+- **Team-prefixed subagents** (`.claude/agents/<team>-<role>.md`) — every role is
+  a named subagent with its own tools allow-list and model.
+- **Three-layer memory** — global (`MEMORY.md`), team (`teams/<team>/MEMORY.md`),
+  and role (`teams/<team>/<role>/MEMORY.md`); the narrowest layer wins.
+- **The QA loop (the Verifier)** — each team runs its own, up to 3 rounds, before
+  work ships.
+- **Context loaded on demand** (`context/INDEX.md`) and **git as the store**.
+
+## Claude Code files (and Codex equivalents)
+Most of this repo is plain Markdown that copies to any agent runner unchanged:
+`MEMORY.md`, `context/`, the `teams/<team>/<role>/` docs, and `playbooks/`
+(playbooks are just SOPs written down, not the Claude "skills" feature). Only a
+few things are genuinely Claude Code-specific:
+
+| This repo (Claude Code) | Codex equivalent |
+|---|---|
+| `CLAUDE.md` (master router / auto-loaded startup) | `AGENTS.md` |
+| `.claude/agents/*.md` (named subagents) | `.codex/agents/*.toml` (custom agents; not auto-delegated, you delegate explicitly) |
+| the `tools:` allow-list in a subagent | `approval_policy` + `sandbox_mode` in `config.toml` (an approval/sandbox model, not a literal tool allow-list) |
+
 ## The progression
 [`ai-agent-base`](https://github.com/gbergeret/ai-agent-base) (one agent) ->
 [`ai-team-base`](https://github.com/gbergeret/ai-team-base) (a team with a
