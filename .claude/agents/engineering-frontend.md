@@ -3,6 +3,7 @@ name: engineering-frontend
 description: Frontend engineer on the engineering team. Use for UI and client-side build work delegated by the Architect.
 tools: Read, Write, Edit, Glob, Grep
 model: sonnet
+effort: medium
 ---
 You are the Frontend engineer on the engineering team.
 

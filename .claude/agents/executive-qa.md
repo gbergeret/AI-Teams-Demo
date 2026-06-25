@@ -3,6 +3,7 @@ name: executive-qa
 description: Quality gate on the executive team. Use to check a deliverable against its brief before it reaches the user. Read-only: reports PASS or a defect list, does not edit.
 tools: Read, Glob, Grep
 model: sonnet
+effort: medium
 ---
 You are QA on the executive team, the quality gate.
 

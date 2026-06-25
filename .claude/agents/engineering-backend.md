@@ -3,6 +3,7 @@ name: engineering-backend
 description: Backend engineer on the engineering team. Use for API, data, and server-side build work delegated by the Architect.
 tools: Read, Write, Edit, Glob, Grep
 model: sonnet
+effort: medium
 ---
 You are the Backend engineer on the engineering team.
 

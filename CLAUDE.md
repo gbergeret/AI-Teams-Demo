@@ -63,6 +63,13 @@ Add a `teams/<name>/` folder with its front-door and specialist role docs, add
 their `<name>-<role>` subagents to `.claude/agents/`, and add a row to the Teams
 table.
 
+## Effort
+Each subagent sets its reasoning effort in its `.claude/agents/<team>-<role>.md`
+frontmatter (`effort:` — one of `low`, `medium`, `high`, `xhigh`, `max`). Match
+it to the role: heavier for the front doors and judgement work, lighter for
+routine execution. The router runs in the main session, so its effort is your
+Claude Code session effort.
+
 ## Memory layers
 Memory is layered:
 - **Shared** — `MEMORY.md` (root): what the whole organisation has learned.
