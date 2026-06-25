@@ -19,10 +19,11 @@ every rule and permission in git, the repo as the company.
 ## How to start
 1. Fork or clone this repo.
 2. Open it in Claude Code.
-3. Talk to it. It reads `CLAUDE.md` (the router) first. The router counts the
-   teams a request touches: one team, the session wears that team's front-door
-   hat and spawns its specialists; more than one, it coordinates the front doors
-   and fans out across teams.
+3. Say **"Hi"** to kick off. On the first run that triggers a quick setup (the
+   welcome wizard). After that the router counts the teams a request touches:
+   one team, the session wears that team's front-door hat and spawns its
+   specialists; more than one, it coordinates the front doors and fans out
+   across teams.
 
 ## The progression
 [`ai-agent-base`](https://github.com/gbergeret/ai-agent-base) (one agent) ->
