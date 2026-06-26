@@ -20,6 +20,11 @@ every rule and permission in git, the repo as the company.
   `frontend`, `backend`, `security`, `qa`.
 - `.claude/agents/`: the subagents, named `<team>-<role>` (the front doors and
   specialists the router and teams delegate to).
+- `PERMISSIONS.md`: the org-wide grants matrix — who may do what (the policy layer).
+- `.claude/settings.json`: the permission floor for connector tools (read
+  allowed, write denied).
+- `playbooks/`: saved procedures run on a trigger word or a schedule (see
+  `playbooks/README.md`).
 
 ## How to start
 1. Fork or clone this repo.
