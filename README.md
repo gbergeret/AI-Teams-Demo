@@ -51,6 +51,10 @@ every rule and permission in git, the repo as the company.
   and role (`teams/<team>/<role>/MEMORY.md`); the narrowest layer wins.
 - **The QA loop (the Verifier)** — each team runs its own, up to 3 rounds, before
   work ships.
+- **Connectors, read-only first** — real tools are added through Claude Code; the
+  executive EA gets the Google Calendar connector in read-only mode (reads
+  allowed, writes denied in `.claude/settings.json`), escalated to write only
+  deliberately.
 - **Scheduled playbooks** (`playbooks/`) — alongside the trigger-word welcome
   wizard, the daily summary runs on a **schedule**: a read-only morning briefing
   from Google Calendar, run by the executive EA.
