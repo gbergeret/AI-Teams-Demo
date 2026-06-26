@@ -16,7 +16,8 @@ every rule and permission in git, the repo as the company.
 - `teams/<team>/MEMORY.md`: what each team has learned.
 - `teams/<team>/<role>/`: one folder per role, each with `ROLE.md` (what it does)
   and `MEMORY.md` (what it has learned). Executive: `cos` (front door), `ea`,
-  `qa`. Engineering: `architect` (front door), `frontend`, `backend`, `qa`.
+  `qa`, `ciso` (org-wide security gate). Engineering: `architect` (front door),
+  `frontend`, `backend`, `security`, `qa`.
 - `.claude/agents/`: the subagents, named `<team>-<role>` (the front doors and
   specialists the router and teams delegate to).
 
@@ -48,6 +49,14 @@ every rule and permission in git, the repo as the company.
 - **Scheduled playbooks** (`playbooks/`) — alongside the trigger-word welcome
   wizard, the daily summary runs on a **schedule**: a read-only morning briefing
   from Google Calendar, run by the executive EA.
+- **Security runs after QA, only when needed** — security is a second gate, never
+  the first: it reviews only QA-validated work, and only when a change is
+  security-relevant. The **Security Engineer** (`engineering-security`) does the
+  hands-on pass inside engineering (gated by the engineering QA loop, no executive
+  needed); the **CISO** (`executive-ciso`) reviews org-wide *policy* changes
+  (`PERMISSIONS.md`, connector grants, allow-lists, `.claude/settings.json`) — by
+  change type, not by team — so the executive enters only when governance changes,
+  never as a routine dependency.
 - **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first),
   `PERMISSIONS.md` (the action-tier grants matrix across both teams), and
   `context/PRINCIPLES.md` (how you like work done). A capability is real only when

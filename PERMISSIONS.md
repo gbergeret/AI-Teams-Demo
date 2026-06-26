@@ -25,7 +25,9 @@ Both must agree; the stricter wins. **DELETE is never granted.**
 | engineering-architect | repo files | READ, EDIT, CREATE |
 | engineering-frontend | repo files | READ, EDIT, CREATE |
 | engineering-backend | repo files | READ, EDIT, CREATE |
+| engineering-security | repo files | READ, EDIT, CREATE |
 | engineering-qa | everything | READ only |
+| executive-ciso | everything (org-wide) | READ only |
 
 Anything not listed stays READ-only. Connectors start read-only; grant a scoped
 write both here and in the role's allow-list, deliberately, when you need it.
