@@ -73,6 +73,23 @@ every rule and permission in git, the repo as the company.
   model), with a `.claude/settings.json` floor denying what should never happen.
 - **Context loaded on demand** (`context/INDEX.md`) and **git as the store**.
 
+## Changing things: the governed flow
+Everything here is plain Markdown in git, so the organisation changes *itself* the
+same way it ships any other work — through a reviewed pull request, never an edit
+in place:
+
+1. **Branch** off `main`.
+2. **Edit** the files (memory, context, a role, or the rules and permissions).
+3. **Open a pull request.** The owning team's **QA loop** checks it, and for
+   anything touching permissions, connectors, or config the **CISO** signs off.
+4. **Merge** once it passes.
+5. **Revert** to undo — `git revert` drops a bad change and keeps *both* the
+   mistake and its correction in the history, so nothing is silently rewritten.
+
+Unlike the single-agent and single-team repos, there is no `save` / `reload`
+shortcut here: at org scale the governed flow is the only path, so every change to
+the company's rules is proposed, reviewed, and reversible.
+
 ## Claude Code files (and Codex equivalents)
 Most of this repo is plain Markdown that copies to any agent runner unchanged:
 `MEMORY.md`, `context/`, the `teams/<team>/<role>/` docs, and `playbooks/`
