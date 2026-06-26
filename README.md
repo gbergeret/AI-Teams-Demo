@@ -45,6 +45,9 @@ every rule and permission in git, the repo as the company.
   and role (`teams/<team>/<role>/MEMORY.md`); the narrowest layer wins.
 - **The QA loop (the Verifier)** — each team runs its own, up to 3 rounds, before
   work ships.
+- **Scheduled playbooks** (`playbooks/`) — alongside the trigger-word welcome
+  wizard, the daily summary runs on a **schedule**: a read-only morning briefing
+  from Google Calendar, run by the executive EA.
 - **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first),
   `PERMISSIONS.md` (the action-tier grants matrix across both teams), and
   `context/PRINCIPLES.md` (how you like work done). A capability is real only when

@@ -80,6 +80,12 @@ it to the role: heavier for the front doors and judgement work, lighter for
 routine execution. The router runs in the main session, so its effort is your
 Claude Code session effort.
 
+## Playbooks
+Playbooks in `playbooks/` are saved procedures (see `playbooks/README.md`). Some
+run once (the welcome wizard), some run on a schedule (a Cadence). Available now:
+- daily (scheduled) -> run `playbooks/001-daily-summary.md`: a morning calendar
+  briefing, run by the executive EA (it holds the calendar read tools).
+
 ## Memory layers
 Memory is layered:
 - **Shared** — `MEMORY.md` (root): what the whole organisation has learned.
