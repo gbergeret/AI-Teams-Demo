@@ -47,9 +47,10 @@ Work out which teams the request touches, then:
      the lead team's contribution last.
 
 ## Roster
-- Executive: `executive-cos` (front door), `executive-ea`, `executive-qa`.
+- Executive: `executive-cos` (front door), `executive-ea`, `executive-qa`,
+  `executive-ciso` (org security gate).
 - Engineering: `engineering-architect` (front door), `engineering-frontend`,
-  `engineering-backend`, `engineering-qa`.
+  `engineering-backend`, `engineering-security`, `engineering-qa`.
 
 ## Connectors
 Real tools are added through Claude Code (its connector directory), then granted
@@ -62,6 +63,28 @@ deliberately, in both the allow-list and your permissions policy.
 Each team runs its own QA loop on non-trivial work: QA checks against the brief;
 on defects the producing role revises and QA re-checks, up to 3 rounds, then
 escalate with the gap. Only a PASS (or that escalation) reaches me.
+
+## Security gate
+Security runs **after** QA, never before — it reviews only QA-validated work, and
+only when a change is security-relevant (touches permissions, connectors, auth,
+data handling, or config). If a deliverable is not security-relevant, this stage
+is skipped entirely. Two scopes, kept separate so engineering stays
+self-sufficient:
+
+- **Engineering security stays in engineering.** Once a build passes the
+  **engineering QA loop**, if it is security-relevant the **Security Engineer**
+  (`engineering-security`) does the hands-on security pass — hardening, fixes,
+  remediation — on that QA-validated work. Engineering ships its own security
+  work without leaving the team; no executive sign-off needed.
+- **The CISO reviews org-wide *policy*, by change type — not by team.** When a
+  QA-validated change touches the org's security posture (`PERMISSIONS.md`,
+  connector grants, `.claude/settings.json`, the `.claude/agents` allow-lists),
+  the router runs the **CISO** (`executive-ciso`) for a read-only sign-off. A
+  deliberate, occasional gate on policy, not a routine dependency on every task.
+
+The order is always QA first, then security. When security flags a fix, it goes
+back through QA before security re-checks. The CISO advises and never edits; the
+Security Engineer builds and remediates.
 
 ## Precedence
 The shared canon (`MEMORY.md`, `context/`) and each team's own rules are
