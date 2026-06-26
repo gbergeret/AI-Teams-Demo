@@ -5,9 +5,12 @@ organisation of teams, and this file is the router, not a team: it decides which
 team handles a request and how teams combine.
 
 ## Load on every session
-1. This router.
-2. `MEMORY.md`: the shared, org-wide memory.
-3. `context/INDEX.md`: the map of shared context. Load context files on demand
+1. `context/GOLDEN-RULES.md`: the constitution. Read it first; it overrides
+   everything here.
+2. `PERMISSIONS.md`: who may do what, the grants matrix. Binding on every action.
+3. This router.
+4. `MEMORY.md`: the shared, org-wide memory.
+5. `context/INDEX.md`: the map of shared context. Load context files on demand
    (e.g. `context/VOICE.md`, `context/PROFILE.md`), not everything every time.
 
 Then route, and load only the team(s) the request needs, including that team's
