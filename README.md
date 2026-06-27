@@ -1,8 +1,9 @@
-# ai-teams-base
+# AI-Teams-Demo
 
-> Workshop 3: from a team to an organisation.
+> A demo repo — from a team to an organisation.
 
-The frontier. Multiple teams coordinated as an organisation of teams, with full
+A public demo repo, illustrative rather than workshop courseware. The frontier:
+multiple teams coordinated as an organisation of teams, with full
 governance and scheduled playbooks running at scale. Parallel work across teams,
 every rule and permission in git, the repo as the company.
 
@@ -103,6 +104,13 @@ few things are genuinely Claude Code-specific:
 | the `tools:` allow-list in a subagent | `approval_policy` + `sandbox_mode` in `config.toml` (an approval/sandbox model, not a literal tool allow-list) |
 
 ## The progression
-[`ai-agent-base`](https://github.com/gbergeret/ai-agent-base) (one agent) ->
-[`ai-team-base`](https://github.com/gbergeret/ai-team-base) (a team with a
-router) -> `ai-teams-base` (an organisation of teams). This is step 3.
+[`AI-Agent-Demo`](https://github.com/gbergeret/AI-Agent-Demo) (one agent) ->
+[`AI-Team-Demo`](https://github.com/gbergeret/AI-Team-Demo) (a team with a
+router) -> `AI-Teams-Demo` (an organisation of teams). This is step 3.
+
+Alongside the ladder,
+[`AI-Engineering-Team-Demo`](https://github.com/gbergeret/AI-Engineering-Team-Demo)
+is the hands-on engineering team the organisation's CTO delegates the building to.
+
+## License
+[MIT](LICENSE) © 2026 GBergeret Cloud Services
