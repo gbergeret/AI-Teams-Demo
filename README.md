@@ -10,7 +10,11 @@ every rule and permission in git, the repo as the company.
 ## What is in here
 - `CLAUDE.md`: the master router. Decides which team handles a request and how
   teams combine.
-- `MEMORY.md`: the shared, org-wide memory.
+- `MEMORY.md`: the shared, org-wide memory, holding a one-line pointer to each
+  active org-level project.
+- `projects/`: org-level work in flight (the Executive team's), one folder per
+  project (`PROJECT.md` + `LOG.md`), so memory stays lean — opened only when a task
+  needs it. Engineering tracks build work on a ticket system, not here.
 - `context/`: shared canon loaded on demand via `context/INDEX.md`. `VOICE.md`
   (how to write) and `PROFILE.md` (who you are: what you do, where you live),
   filled in by the first-run setup.
@@ -50,6 +54,10 @@ every rule and permission in git, the repo as the company.
   a named subagent with its own tools allow-list and model.
 - **Three-layer memory** — global (`MEMORY.md`), team (`teams/<team>/MEMORY.md`),
   and role (`teams/<team>/<role>/MEMORY.md`); the narrowest layer wins.
+- **Projects (PARA)** (`projects/`) — org-level work in flight lives in one folder
+  per project (`PROJECT.md` + `LOG.md`), so `MEMORY.md` keeps only a one-line
+  pointer and a project's detail is opened only when a task needs it. Scoped to the
+  Executive team; Engineering tracks build work on a ticket system, not here.
 - **The QA loop (the Verifier)** — each team runs its own, up to 3 rounds, before
   work ships.
 - **Connectors, read-only first** — real tools are added through Claude Code; the

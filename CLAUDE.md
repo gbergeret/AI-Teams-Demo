@@ -118,3 +118,8 @@ Load shared always, the team layer when working in that team, and the role layer
 when acting as that role. Keep each current in place (replace what is outdated).
 Put each learning at the narrowest layer it belongs to; on conflict the more
 specific layer wins.
+
+Org-level work in flight (the Executive team's) lives in `projects/` (one folder per
+project; see `projects/README.md`), so memory holds only a one-line pointer — open a
+project's folder only when the task needs it. Engineering tracks build work on a
+ticket system, not in `projects/`.

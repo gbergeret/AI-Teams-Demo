@@ -12,5 +12,8 @@ outdated lines in place, do not just append.
   front door, frontend, backend, Security Engineer, QA) builds the software.
   Roles live in `teams/`.
 
-## In flight
-- Nothing yet. This fills in as we work.
+## Projects (work in flight)
+Org-level work (the Executive team's) lives in `projects/` — one folder each, with a
+one-line pointer here so this file stays lean. Open a project's folder only when the
+task needs it. (Engineering tracks build work on a ticket system, not here.)
+- _None yet._ This fills in as we work.
