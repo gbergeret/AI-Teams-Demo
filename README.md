@@ -100,6 +100,10 @@ every rule and permission in git, the repo as the company.
   token spend and $ cost per agent and per model, read from the session transcript.
   Run it at the end of a session or a scheduled playbook; it makes the honest cost
   of a multi-team, multi-agent run legible.
+- **A self-documented architecture** (`context/SYSTEM-ARCHITECTURE.md`) — one
+  end-to-end map (router, teams, request flow, gates, memory, permissions, repo
+  layout) for onboarding or auditing the whole organisation at a glance; the detail
+  stays in the files it points at.
 - **Context loaded on demand** (`context/INDEX.md`) and **git as the store**.
 
 ## Changing things: the governed flow
