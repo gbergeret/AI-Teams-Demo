@@ -53,6 +53,10 @@ every rule and permission in git, the repo as the company.
 - **Cross-team handoff** — for work spanning teams, the router calls the front
   doors **plan-only** (they return briefs, do not spawn), picks a lead team and a
   handoff contract, then fans out and synthesises.
+- **Legible delegation** — every hand-off (the router's and each front door's) is a
+  **six-field brief** (objective, context refs, constraints, deliverable, acceptance
+  criteria, memory to carry), and routing is announced (`→ role — what`) and
+  attributed (`← from role`), so the work is readable, not a black box.
 - **Team-prefixed subagents** (`.claude/agents/<team>-<role>.md`) — every role is
   a named subagent with its own tools allow-list and model.
 - **Add a teammate, governed** (`.claude/agents/_TEMPLATE.md` + "Adding a role" in

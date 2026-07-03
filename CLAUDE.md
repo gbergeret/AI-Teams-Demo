@@ -46,6 +46,12 @@ Work out which teams the request touches, then:
   4. The router fans out to the required specialists itself, then synthesises,
      the lead team's contribution last.
 
+Every hand-off — the router's and each front door's — carries a **six-field brief**
+(objective, context refs, constraints, deliverable, acceptance criteria, memory to
+carry) and is **announced and attributed** (`→ <role> — what` on the way out,
+`← from <role> (QA: PASS)` on the way back), so the work stays legible, not a black
+box. The per-role brief detail lives in each front door's `ROLE.md`.
+
 ## Roster
 - Executive: `executive-cos` (front door), `executive-ea`, `executive-qa`,
   `executive-ciso` (org security gate).
