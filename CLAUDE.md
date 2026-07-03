@@ -96,6 +96,20 @@ Add a `teams/<name>/` folder with its front-door and specialist role docs, add
 their `<name>-<role>` subagents to `.claude/agents/`, and add a row to the Teams
 table.
 
+## Adding a role
+A role is real only when every place that defines it agrees — so adding one to a
+team is a short checklist, not a single file. Copy `.claude/agents/_TEMPLATE.md`
+and:
+1. **Create** `teams/<team>/<role>/ROLE.md` (its mandate) and `teams/<team>/<role>/MEMORY.md`.
+2. **Create** `.claude/agents/<team>-<role>.md` (its runtime manifest: tools, model, effort).
+3. **Add it to the roster** in this `CLAUDE.md` (## Roster) and in `README.md`.
+4. **Grant its surface** in `PERMISSIONS.md`, and mirror it in the manifest's
+   `tools:` — the two-place model; the stricter of the two wins.
+5. **Open a pull request** so the change is reviewed; the team's QA loop (and the
+   CISO, if it touches permissions or connectors) checks it before it lands.
+Skip a step and the role is half-wired — the manifest exists but nothing routes to
+it, or it holds a tool the policy never granted.
+
 ## Effort
 Each subagent sets its reasoning effort in its `.claude/agents/<team>-<role>.md`
 frontmatter (`effort:` — one of `low`, `medium`, `high`, `xhigh`, `max`). Match

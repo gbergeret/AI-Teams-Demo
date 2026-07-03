@@ -24,7 +24,8 @@ every rule and permission in git, the repo as the company.
   `qa`, `ciso` (org-wide security gate). Engineering: `architect` (front door),
   `frontend`, `backend`, `security`, `qa`.
 - `.claude/agents/`: the subagents, named `<team>-<role>` (the front doors and
-  specialists the router and teams delegate to).
+  specialists the router and teams delegate to), plus `_TEMPLATE.md` — the scaffold
+  for adding a new role (see "Adding a role" in `CLAUDE.md`).
 - `PERMISSIONS.md`: the org-wide grants matrix — who may do what (the policy layer).
 - `.claude/settings.json`: the permission floor for connector tools (read
   allowed, write denied).
@@ -52,6 +53,10 @@ every rule and permission in git, the repo as the company.
   handoff contract, then fans out and synthesises.
 - **Team-prefixed subagents** (`.claude/agents/<team>-<role>.md`) — every role is
   a named subagent with its own tools allow-list and model.
+- **Add a teammate, governed** (`.claude/agents/_TEMPLATE.md` + "Adding a role" in
+  `CLAUDE.md`) — a role is real only when every place that defines it agrees (role
+  docs, runtime manifest, roster, permissions). The checklist makes "a team grows
+  itself" a reviewable procedure, not an ad-hoc edit.
 - **Three-layer memory** — global (`MEMORY.md`), team (`teams/<team>/MEMORY.md`),
   and role (`teams/<team>/<role>/MEMORY.md`); the narrowest layer wins.
 - **Projects (PARA)** (`projects/`) — org-level work in flight lives in one folder
