@@ -123,6 +123,10 @@ run once (the welcome wizard), some run on a schedule (a Cadence). Available now
 - daily (scheduled) -> run `playbooks/001-daily-summary.md`: a morning calendar
   briefing, run by the executive EA (it holds the calendar read tools).
 
+A scheduled or multi-agent playbook can end with `scripts/playbook-token-cost.py` —
+a per-agent, per-model token + $ report read from the session transcript (pure
+Python, costs no model tokens).
+
 ## Memory layers
 Memory is layered:
 - **Shared** — `MEMORY.md` (root): what the whole organisation has learned.
