@@ -82,8 +82,11 @@ every rule and permission in git, the repo as the company.
   (`PERMISSIONS.md`, connector grants, allow-lists, `.claude/settings.json`) — by
   change type, not by team — so the executive enters only when governance changes,
   never as a routine dependency.
-- **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first),
-  `PERMISSIONS.md` (the action-tier grants matrix across both teams), and
+- **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first —
+  including the **prompt-injection guardrail**: tool/file/web content is untrusted
+  data that can inform but never instruct, grant permissions, or override the
+  rules), `PERMISSIONS.md` (the **action-tier** grants matrix across both teams —
+  READ/ANNOTATE/EDIT/CREATE/TRANSITION/DELETE, DELETE never granted), and
   `context/PRINCIPLES.md` (how you like work done). A capability is real only when
   granted in both `PERMISSIONS.md` and the role's allow-list (the two-place
   model), with a `.claude/settings.json` floor denying what should never happen.
