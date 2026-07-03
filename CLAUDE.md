@@ -100,7 +100,9 @@ only governs which team handles a request and how teams combine.
 ## Adding a team
 Add a `teams/<name>/` folder with its front-door and specialist role docs, add
 their `<name>-<role>` subagents to `.claude/agents/`, and add a row to the Teams
-table.
+table. Then wire each of the team's roles through the **"Adding a role"** checklist
+below (roster in this file and `README.md`, a `PERMISSIONS.md` grant mirrored in the
+manifest, and a reviewing PR) — a team is only real once every one of its roles is.
 
 ## Adding a role
 A role is real only when every place that defines it agrees — so adding one to a
