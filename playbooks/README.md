@@ -7,6 +7,13 @@ with a clear goal and steps. Keep them readable.
 Numbered for a stable order: `NNN-short-name.md`. `000` is reserved for
 first-run setup.
 
+## Writing one
+Copy `_TEMPLATE.md`. It sets the standard shape: a **Cadence** line (scheduled vs
+on-demand), a **Tools & permissions** note, **Scope** (in/out), **Steps**, **Rules**,
+an **End-of-run report** (a scheduled or multi-agent run ends with
+`scripts/playbook-token-cost.py`), and a **Done when** check. The answer to a
+recurring request can *be* a playbook — write it down once, run it many times.
+
 ## How they run
 - **On demand:** you ask for it by name.
 - **Scheduled:** some run on a cadence (e.g. daily); set them up as a recurring

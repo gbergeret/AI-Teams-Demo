@@ -79,7 +79,8 @@ every rule and permission in git, the repo as the company.
   deliberately.
 - **Scheduled playbooks** (`playbooks/`) — alongside the trigger-word welcome
   wizard, the daily summary runs on a **schedule**: a read-only morning briefing
-  from Google Calendar, run by the executive EA.
+  from Google Calendar, run by the executive EA. New ones follow
+  `playbooks/_TEMPLATE.md` (Cadence, Scope, Steps, Rules, End-of-run report, Done-when).
 - **Security runs after QA, only when needed** — security is a second gate, never
   the first: it reviews only QA-validated work, and only when a change is
   security-relevant. The **Security Engineer** (`engineering-security`) does the
