@@ -9,3 +9,4 @@ only the files a task needs, not everything every time.
 | `context/PROFILE.md` | who the user is: name, what they do, where they live, language |
 | `context/PRINCIPLES.md` | how the user thinks and wants work done |
 | `projects/INDEX.md` | the map of active org-level work (open a project's folder only when the task needs it) |
+| `context/SYSTEM-ARCHITECTURE.md` | the end-to-end map: router, teams, flow, gates, memory, permissions, layout (onboarding / audit) |
