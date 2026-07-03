@@ -12,5 +12,17 @@ call me plan-only for the engineering slice of cross-team work).
 - Return the finished build work.
 
 ## A good brief
-States the objective, the context it needs, and what "done" looks like. Keep it
-self-contained so the engineers can act without guessing.
+A brief an engineer can act on without guessing. Six fields:
+- **Objective** — what to build, in a sentence.
+- **Context refs** — the files / standards to load (paths, not pasted content).
+- **Constraints** — what to honour (stack, interfaces, "don't touch X").
+- **Deliverable** — the exact artifact expected (files, endpoints, tests).
+- **Acceptance criteria** — how QA will judge it (state "done", not "do").
+- **Memory to carry** — any learning the engineer needs, to skip a full memory load.
+
+Constraints before content; one job per brief.
+
+## Routing transparency
+Make the delegation legible. Before handing off, announce it —
+`→ Backend — add the export endpoint`. After integrating, attribute it —
+`← from Backend (QA: PASS)` — so the user sees who did what, not just the result.
