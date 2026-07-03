@@ -69,8 +69,10 @@ every rule and permission in git, the repo as the company.
   per project (`PROJECT.md` + `LOG.md`), so `MEMORY.md` keeps only a one-line
   pointer and a project's detail is opened only when a task needs it. Scoped to the
   Executive team; Engineering tracks build work on a ticket system, not here.
-- **The QA loop (the Verifier)** — each team runs its own, up to 3 rounds, before
-  work ships.
+- **The QA loop (the Verifier)** — each team runs its own; QA grades each finding
+  `[BLOCK]` / `[SUGGEST]` / `[NIT]` / `[QUESTION]`, and only `[BLOCK]` sends it back
+  (up to 3 rounds, then escalate). Graded findings keep the loop fast — fix what
+  matters, don't churn on nits.
 - **Connectors, read-only first** — real tools are added through Claude Code; the
   executive EA gets the Google Calendar connector in read-only mode (reads
   allowed, writes denied in `.claude/settings.json`), escalated to write only
