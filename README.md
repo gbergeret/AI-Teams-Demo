@@ -35,13 +35,29 @@ every rule and permission in git, the repo as the company.
   report read from the session transcript (pure Python, costs no model tokens).
 
 ## How to start
-1. Fork or clone this repo.
-2. Open it in Claude Code.
-3. Say **"Hi"** to kick off. On the first run that triggers a quick setup (the
-   welcome wizard). After that the router counts the teams a request touches:
-   one team, the session wears that team's front-door hat and spawns its
-   specialists; more than one, it coordinates the front doors and fans out
-   across teams.
+
+> **Do not fork this repo.** A fork of a public repo is forced public, and your copy
+> will hold your own private memory and context, so it must stay private. Copy it into
+> a fresh private repo instead (steps below). Only fork if it is purely for a public
+> demo or showcase.
+
+1. **Create a new, empty private repo.** This becomes your own organisation. It must
+   be **private**: it will hold your personal memory, context, and profile, so it
+   should never be public.
+2. **Start a Claude Code session on that new, empty private repo** (for example,
+   Claude Code on the web).
+3. **Run this prompt** to copy the demo in and set yourself up:
+   ```
+   Copy everything from https://github.com/gbergeret/AI-Teams-Demo into this repo and
+   push it all to main in a single commit messaged "Copied from gbergeret/AI-Teams-Demo".
+   Then read CLAUDE.md and run the welcome wizard (playbooks/000-welcome-wizard.md) to
+   set me up.
+   ```
+4. **Save your setup.** Raise a PR to merge your onboarding into main. This repo has no
+   `save` shortcut by design: at org scale the governed PR flow is the only path.
+5. **You are set.** From here the router counts the teams a request touches: one team,
+   the session wears that team's front-door hat and spawns its specialists; more than
+   one, it coordinates the front doors and fans out across teams.
 
 ## Concepts in this repo
 - **Master router** (`CLAUDE.md`) — the entry point is a router, not a team; it
