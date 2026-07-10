@@ -93,9 +93,10 @@ every rule and permission in git, the repo as the company.
   executive EA gets the Google Calendar connector in read-only mode (reads
   allowed, writes denied in `.claude/settings.json`), escalated to write only
   deliberately.
-- **Scheduled playbooks** (`playbooks/`) — alongside the trigger-word welcome
-  wizard, the daily summary runs on a **schedule**: a read-only morning briefing
-  from Google Calendar, run by the executive EA. New ones follow
+- **Scheduled playbooks** (`playbooks/`) — alongside the trigger-word playbooks (the
+  welcome wizard, and "update from upstream" to pull the latest template improvements
+  from the original demo), the daily summary runs on a **schedule**: a read-only
+  morning briefing from Google Calendar, run by the executive EA. New ones follow
   `playbooks/_TEMPLATE.md` (Cadence, Scope, Steps, Rules, End-of-run report, Done-when).
 - **Security runs after QA, only when needed** — security is a second gate, never
   the first: it reviews only QA-validated work, and only when a change is

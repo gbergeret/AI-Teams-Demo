@@ -128,7 +128,10 @@ Claude Code session effort.
 ## Playbooks
 Playbooks in `playbooks/` are saved procedures (see `playbooks/README.md`). Some
 run once (the welcome wizard), some run on a schedule (a Cadence). Available now:
-- daily (scheduled) -> run `playbooks/001-daily-summary.md`: a morning calendar
+- "update from upstream" (or "check for updates") -> run
+  `playbooks/001-update-from-upstream.md`: pull the latest template updates from the
+  original demo.
+- daily (scheduled) -> run `playbooks/002-daily-summary.md`: a morning calendar
   briefing, run by the executive EA (it holds the calendar read tools).
 
 A scheduled or multi-agent playbook can end with `scripts/playbook-token-cost.py` —

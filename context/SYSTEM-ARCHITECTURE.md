@@ -74,7 +74,7 @@ AI-Teams-Demo/
 ├── teams/<team>/       # per-team MEMORY.md + <role>/ (ROLE.md + MEMORY.md)
 │   ├── executive/      # cos (front door), ea, qa, ciso
 │   └── engineering/    # architect (front door), frontend, backend, security, qa
-├── playbooks/          # welcome wizard + daily summary
+├── playbooks/          # welcome wizard + update-from-upstream + daily summary
 ├── scripts/            # token-cost report
 └── .claude/
     ├── agents/          # <team>-<role> manifests + _TEMPLATE.md
