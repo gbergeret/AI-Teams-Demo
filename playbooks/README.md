@@ -22,4 +22,6 @@ recurring request can *be* a playbook — write it down once, run it many times.
 
 ## Playbooks here
 - `000-welcome-wizard.md`: first-run onboarding. Runs once, then deletes itself.
-- `001-daily-summary.md`: a morning briefing from the calendar (scheduled, read-only).
+- `001-update-from-upstream.md`: pull the latest template updates from the original
+  demo you copied this from (say "update from upstream").
+- `002-daily-summary.md`: a morning briefing from the calendar (scheduled, read-only).
